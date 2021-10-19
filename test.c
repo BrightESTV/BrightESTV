@@ -65,6 +65,7 @@
 //
 //	return 0;
 //}
+// 第一个买彩票程序
 //int main()
 //{
 //	int input = 0;
@@ -100,11 +101,13 @@
 //
 //    return 0;
 //}
-//int main()
+// 写的第二个买彩票的，比较OK
+// scanf（vs2019记得加 _s ）取地址，可以获得你输的数字
+//int main()    
 //{
 //	int a = 0;
 //	int b = 0;
-//	int c = 0;
+//	int c = 0;       
 //	int d = 0;
 //	printf("you wang to buy a lottery ticket");
 //	printf("so please you input follow number (0/1)>：");
@@ -143,55 +146,91 @@
 //
 //
 //
-//	return 0}
-//;
+//	return 0;
+// }
+// 写的第三个买彩票的，能运行但出现了bug，还修不了
+//getchar() 获取字符
 
+//int main()   
+//{             
+//	int a = 0;
+//	
+//	int c = 0;
+//	int d = 0;
+//	printf("you wang to buy lottery ticket(Y/N)\n");
+//	a = getchar();
+//	if (a == 'Y')
+//	{
+//		
+//		printf("请输入你的号码(四位数)");
+//		int b = 0;
+//		scanf_s("%d",&b);
+//		if (b >= 1500 && b <= 2000 )
+//		{
+//			printf("迎娶白富美");
+//		}
+//		else
+//		{
+//			printf("密码错误\n");
+//			printf("想要打工吗（Y / N）");
+//				c = getchar();
+//			if (c == 'Y')
+//			{
+//				printf("want yo go ahead(Y/N)");
+//				d = getchar();
+//				if (d == 'Y')
+//				{
+//					printf("a");
+//				}
+//				else
+//					printf("n");
+//			}
+//			/*else
+//			{
+//				printf("huijia");
+//			}*/
+//		}
+//	}
+//	else
+//		printf("go home");
+//
+//
+//	return 0;
+//}
+// for 循环 里禁止改变变量，使用前闭后开的写法如 i<=9 写成 i <10
+// for循环 赋值 判断 调整 都可以省略
+// 无的结果      死循环（恒为真）
+//第一个for循环
+//int main()
+//{
+//    int a = 0;
+//    int b = 0;
+//    for (a = 0; a <= 10; a++)
+//    {
+//        for (b = 0; b <= 3; b++)
+//        {
+//            printf("买彩票%d\n",b);
+//        }
+//    }
+//
+//
+//    return 0;
+//}
 int main()
 {
 	int a = 0;
-	
-	int c = 0;
-	int d = 0;
-	printf("you wang to buy lottery ticket(Y/N)\n");
-	a = getchar();
-	if (a == 'Y')
+	int b = 1;
+	for (a = 1; a<10; a++)
 	{
-		
-		printf("请输入你的号码(四位数)");
-		int b = 0;
-		scanf_s("%d",&b);
-		if (b >= 1500 && b <= 2000 )
-		{
-			printf("迎娶白富美");
-		}
-		else
-		{
-			printf("密码错误\n");
-			printf("想要打工吗（Y / N）");
-				c = getchar();
-			if (c == 'Y')
-			{
-				printf("want yo go ahead(Y/N)");
-				d = getchar();
-				if (d == 'Y')
-				{
-					printf("a");
-				}
-				else
-					printf("n");
-			}
-			/*else
-			{
-				printf("huijia");
-			}*/
-		}
+		b *= a;
+		printf("%d\n",b);
 	}
-	else
-		printf("go home");
-
+	printf("%d\n",b);
 
 	return 0;
 }
+
+
 
 
 
