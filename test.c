@@ -216,19 +216,45 @@
 //
 //    return 0;
 //}
+//int main()
+//{
+//	int a = 0;
+//	int b = 1;
+//	for (a = 1; a<10; a++)
+//	{
+//		b *= a;
+//		printf("%d\n",b);
+//	}
+//	printf("%d\n",b);
+//
+//	return 0;
+//}
+#include <string.h>
+#include <windows.h>
 int main()
 {
-	int a = 0;
-	int b = 1;
-	for (a = 1; a<10; a++)
+	char a[] = "welcome to league of legends ";
+	char b[] = "#############################";
+	int right = strlen(a)-1;
+	int left = 0;
+
+	while (left >= right)
 	{
-		b *= a;
-		printf("%d\n",b);
+		a[left] = b[left];
+		a[right] = b[right];
+		printf("%s\n", b);
+		left++;
+		right--;
+		Sleep(1000);
+
 	}
-	printf("%d\n",b);
+
 
 	return 0;
 }
+
+
+
 
 
 
