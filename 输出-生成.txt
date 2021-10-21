@@ -1,0 +1,5 @@
+﻿已启动生成…
+1>------ 已启动生成: 项目: ggggg.c, 配置: Debug Win32 ------
+1>源.c
+1>ggggg.c.vcxproj -> C:\Users\fengqijun\source\repos\ggggg.c\Debug\ggggg.c.exe
+========== 生成: 成功 1 个，失败 0 个，最新 0 个，跳过 0 个 ==========
