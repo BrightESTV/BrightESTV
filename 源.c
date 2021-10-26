@@ -212,20 +212,117 @@
 //    return 0;
 //}
 //判断数值大小
+//int main()
+//{
+//	int a[] = {-1,-2,-3,-4,-5,-6,-7,-8,-9,-10};
+//	int max = a[0];
+//	int j = 0;
+//	int s = sizeof(a) / sizeof(a[0]);
+//	for (j = 0; j <= s; j++)
+//	{ 
+//		if (a[j] > max)
+//		{
+//			max = a[j];
+//		}
+//		
+//	}
+//	printf("max = %d", max);
+//	return 0;
+//}
+//猜数字游戏
+//menu 菜单函数
+//0x代表十六进制
+//rand 产生的随机数最大值为32767
+//时间戳 当前计算机的时间-计算机的起始时间（1970.1.1.0：0） = （xxxxx）秒
+//NUll 空指针
+//猜字谜的小游戏
+//srand 引用需要<stdlid.h>
+//引用时间戳需要<time.h>
+//srand((unsigned int) time (NULL));
+//#include <stdlib.h>
+//#include <time.h>
+//void menu()
+//{
+//	printf("*******************************************\n");
+//	printf("***          play 1  ;   exit 0         ***\n");
+//	printf("*******************************************\n");
+//	
+//}
+//void game()
+//{
+//	printf("give a number\n");
+//	int ret = 0;
+//	int a = 0;
+//	ret = rand()%100+1;
+//	while (1)
+//	{
+//		printf("please input a  number>: \n");
+//		scanf_s("%d",&a);
+//		if (a > ret)
+//		{
+//			printf("bigger\n");
+//		}
+//		else if (a < ret)
+//		{
+//			printf("smaller\n");
+//		}
+//		else
+//		{
+//			printf("good gob\n");
+//			break;
+//		}
+//
+//	}
+//
+//}
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned  int)time(NULL));
+//	do              //输出菜单，选择是否进行下一步
+//	{
+//		menu();
+//		printf("please input>: ");
+//		scanf_s("%d",&input);
+//		switch (input)
+//		{ 
+//		case 1:
+//			game();
+//		    break;
+//	    case 0:
+//		    printf("quit ganmes\n");
+//		    break;
+//		default:
+//			printf("false\n");
+//			break;
+//		}
+//	} while (input);
+//
+//
+//	return 0;
+//}
+//shutdown -s -t 60
+//-t设置时间关机
+//shutdown -s 关机
+//shutdown -a 停止关机
+#include <string.h>
+#include <stdlib.h>
 int main()
 {
-	int a[] = {-1,-2,-3,-4,-5,-6,-7,-8,-9,-10};
-	int max = a[0];
-	int j = 0;
-	int s = sizeof(a) / sizeof(a[0]);
-	for (j = 0; j <= s; j++)
-	{ 
-		if (a[j] > max)
-		{
-			max = a[j];
-		}
-		
+	char arr[20] = {0};
+	system("shutdown -s -t 6000");
+again:
+	printf("电脑将在一分钟后关机，请输入“我是猪”停止程序。请输入>: \n");
+	scanf_s("%s",arr);
+	if (strcmp(arr, "我是猪") == 0)
+	{
+		system("shutdown -a");
 	}
-	printf("max = %d", max);
+	else 
+	{
+		goto again;
+		
+	} 
+
 	return 0;
 }
