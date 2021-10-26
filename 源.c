@@ -170,26 +170,62 @@
 //	return 0;
 //}
 #include <math.h>
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 101; i <= 200; i+=2)
+//	{
+//		int j = 0;
+//		for (j = 2; j<=sqrt(i);j++)
+//			if (i%j == 0)
+// 			{  
+//				break;
+//			}
+//		if (j>sqrt(i))
+//			{
+//				count++;
+//				printf("%d\n",i);
+//			}
+//		
+//	}
+//	printf("\ncount = %d\n",count);
+//
+//	return 0;
+//}
+//乘法表
+//int main()
+//{
+//    int a = 0;
+//    for (a = 1; a <= 9; a++)
+//    { 
+//        int b = 1;
+//        for (b = 1; b <= a; b++)
+//        {
+//            printf("%d*%d=%-2d ",a,b,a*b);
+//        }
+//        printf("\n");
+//    }
+//
+//
+//
+//    return 0;
+//}
+//判断数值大小
 int main()
 {
-	int i = 0;
-	int count = 0;
-	for (i = 101; i <= 200; i+=2)
-	{
-		int j = 0;
-		for (j = 2; j<=sqrt(i);j++)
-			if (i%j == 0)
- 			{  
-				break;
-			}
-		if (j>sqrt(i))
-			{
-				count++;
-				printf("%d\n",i);
-			}
+	int a[] = {-1,-2,-3,-4,-5,-6,-7,-8,-9,-10};
+	int max = a[0];
+	int j = 0;
+	int s = sizeof(a) / sizeof(a[0]);
+	for (j = 0; j <= s; j++)
+	{ 
+		if (a[j] > max)
+		{
+			max = a[j];
+		}
 		
 	}
-	printf("\ncount = %d\n",count);
-
+	printf("max = %d", max);
 	return 0;
 }
